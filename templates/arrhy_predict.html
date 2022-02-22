@@ -1,0 +1,34 @@
+{% extends 'homepage.html' %}
+
+{% block title %}{{Name}}{% endblock %}
+{% block main %}
+
+<div class="row justify-content-center" style="margin-top: 2em;">
+  
+  {% if index=="0" %}
+    <img src="https://i.makeagif.com/media/4-22-2018/E8eKov.gif" style="width: 80%;max-width:30em;">
+    <h3 style="font-weight: bold;font-size: 2em;text-align: center;margin-top:1em;">You are perfectly alright 😁</h3>
+
+    <div class="row justify-content-center" style="width:100%;margin-top:1.5em;">
+        <center>
+            <a href="/">
+                <button class="btn btn-success">Go Back to Homepage</button>
+            </a>
+        </center>
+    </div>
+  {% else %}
+    <img src = "https://media.istockphoto.com/photos/cardiogram-for-monitoring-heart-beat-3d-rendered-illustration-picture-id953438656?b=1&k=20&m=953438656&s=170667a&w=0&h=QWhpIvdr9tIgSbTqudq7tcyCYYdOwgRhZ3M-UEIybAI=" style="width: 80%;max-width:30em;">
+    <!-- <h3 style="font-weight: medium;font-size: 1.5em;text-align: center;margin-top:1em;">Strengthen you heart!</h3> -->
+    <h3 style="font-size: 1.5em;text-align: center;margin-top:1.5em;font-weight: bold;">You have Arrhythmia with <br>{{type}} 😔</h3>
+
+    <div class="row justify-content-center" style="width:100%;margin-top:2em;">
+        <center>
+            <a href="/">
+                <button class="btn btn-success">Go Back to Homepage</button>
+            </a>
+        </center>
+    </div>
+  {% endif %}
+</div>
+
+{% endblock %}

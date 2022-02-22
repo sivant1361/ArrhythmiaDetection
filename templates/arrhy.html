@@ -1,0 +1,50 @@
+{% extends 'homepage.html' %}
+
+{% block title %}{{Name}}{% endblock %}
+{% block main %}
+<div class="row justify-content-center" style="background-color: #f6f6f6;padding:1em;height:100%;margin-top:1em">
+    <div class="col-lg-6 col-sm-12 block" style="padding:1em;">
+        <img src="{{url_for('static', filename='img_1.png')}}" alt="Image not available"
+            style="width: 100%;height:100%">
+        </div>
+        <div class="col-lg-6 col-sm-12 block row justify-content-center align-items-center" style="padding:1em;">
+        <!-- <h2 style="font-weight:bold;color:rgb(0,0,150);text-align:center">BODY MASS INDEX</h2> -->
+        <h2 class="list-group-item list-group-item-success" style="font-weight:bold;color:rgb(0,0,150);text-align:center">ARRHYTHMIA DETECTION</h2>
+        <!-- <form class="form-inline row justify-content-center" action="{{ url_for('arrhy_predict')}}" method="post">
+            <div class="form-group" style="padding:1em">
+                <label style="font-weight:bold;padding-bottom:5px" for="gender">Gender</label>
+                <select name="gender" id="gender" class="form-control" title="Select Gender">
+                    <option disabled selected hidden value="">Select Gender</option>
+                    <option value="0">Male</option>
+                    <option value="1">Female</option>
+                </select>
+            </div>
+            <div class="form-group" style="padding:1em">
+                <label style="font-weight:bold;padding-bottom:5px" for="age">Age</label>
+                <input type="number" class="form-control" id="age" name="age" placeholder = "Enter Your Age" >
+            </div>
+            <div class="form-group" style="padding:1em">
+                <label style="font-weight:bold;padding-bottom:5px" for="height">Height (cm)</label>
+                <input type="text" class="form-control" id="height" name="height" placeholder = "Enter Your Height" >
+            </div>
+            <div class="form-group" style="padding:1em">
+                <label style="font-weight:bold;padding-bottom:5px" for="weight">Weight (kg)</label>
+                <input type="text" class="form-control" name="weight" placeholder = "Enter Your Weight" >
+            </div>
+            <div class="row justify-content-center mt-4">
+                <button class="btn btn-outline-primary col-md-6 col-sm-6 col-xs-6">Predict</button>
+            </div>
+
+        </form> -->
+        <form action = "{{ url_for('arrhy_predict')}}" method = "POST" 
+            enctype = "multipart/form-data"
+            style="margin-top:1em">
+            <div class="row justify-content-center mt-2">
+                <input type = "file" name = "file" />
+            </div>
+            <div class="row justify-content-center mt-4">
+                <button class="btn btn-outline-primary col-md-6 col-sm-6 col-xs-6">Predict</button>
+            </div>
+        </form>   
+    </div>
+    {% endblock %}

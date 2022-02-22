@@ -1,0 +1,43 @@
+abnormal_beats_index = {
+    "N":0,
+    "L":1,
+    "R":2,
+    "B":3,
+    "A":4,
+    "a":5,
+    "J":6,
+    "S":7,
+    "V":8,
+    "r":9,
+    "F":10,
+    "e":11,
+    "j":12,
+    "n":13,
+    "E":14,
+    "/":15,
+    "f":16,
+    "Q":17,
+    "?":18
+}
+
+abnormal_beats_dict = {
+    0:"Normal beat",
+    1:"Left bundle branch block beat",
+    2:"Right bundle branch block beat",
+    3:"Bundle branch block beat (unspecified)",
+    4:"Atrial premature beat",
+    5:"Aberrated atrial premature beat",
+    6:"Nodal (junctional) premature beat",
+    7:"Supraventricular premature or ectopic beat (atrial or nodal)",
+    8:"Premature ventricular contraction",
+    9:"R-on-T premature ventricular contraction",
+    10:"Fusion of ventricular and normal beat",
+    11:"Atrial escape beat",
+    12:"Nodal (junctional) escape beat",
+    13:"Supraventricular escape beat (atrial or nodal)",
+    14:"Ventricular escape beat",
+    15:"Paced beat",
+    16:"Fusion of paced and normal beat",
+    17:"Unclassifiable beat",
+    18:"Beat not classified during learning"
+}
